@@ -10,17 +10,24 @@
 </head>
 <body>
     <div class="container">
-        <label for="conversion">Select Conversion Type:</label>
-        <select id="conversion">
-            <option value="dollars_to_gold">Dollars to Gold</option>
-            <option value="dollars_to_unbound">Dollars to Unbound</option>
-            <option value="dollars_to_bound">Dollars to Bound</option>
-            <option value="gold_to_bound">Gold to Bound</option>
-        </select>
-        <label for="value">Enter Value:</label>
-        <input type="text" id="value">
+        <input type="text" id="sourceValue" placeholder="Enter value">
+<select id="conversion">
+    <option value="dollars_to_gold">Dollars to Gold</option>
+    <option value="gold_to_dollars">Gold to Dollars</option>
+    <option value="dollars_to_unbound">Dollars to Unbound</option>
+    <option value="unbound_to_dollars">Unbound to Dollars</option>
+    <option value="dollars_to_bound">Dollars to Bound</option>
+    <option value="bound_to_dollars">Bound to Dollars</option>
+    <option value="gold_to_bound">Gold to Bound</option>
+    <option value="bound_to_gold">Bound to Gold</option>
+    <option value="gold_to_unbound">Gold to Unbound</option>
+    <option value="unbound_to_gold">Unbound to Gold</option>
+    <option value="unbound_to_bound">Unbound to Bound</option>
+    <option value="bound_to_unbound">Bound to Unbound</option>
+</select>
+
+        <input type="text" id="destinationValue" readonly placeholder="Result">
         <button onclick="convert()">Convert</button>
-        <p>Result: <span id="result"></span></p>
     </div>
 </body>
 </html>

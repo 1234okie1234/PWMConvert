@@ -1,26 +1,31 @@
 function convert() {
-    var val = document.getElementById('value').value;
+    var sourceValue = document.getElementById('sourceValue').value;
     var conversionType = document.getElementById('conversion').value;
-    var result;
+    var destinationValue;
 
     try {
-        val = parseFloat(val);
-        if (val < 0) {
-            result = 'Invalid input! Enter a non-negative number.';
+        sourceValue = parseFloat(sourceValue);
+        if (sourceValue < 0) {
+            destinationValue = 'Invalid input! Enter a non-negative number.';
         } else {
-            if (conversionType === 'dollars_to_gold') {
-                result = val * 1000000 / 3.30;
-            } else if (conversionType === 'dollars_to_unbound') {
-                result = val * 6000 / 100;
-            } else if (conversionType === 'dollars_to_bound') {
-                result = val * 12000 / 100;
-            } else if (conversionType === 'gold_to_bound') {
-                result = val * 396 / 1000000;
+            switch (conversionType) {
+                case 'dollars_to_gold': destinationValue = sourceValue * 1000000 / 3.30; break;
+                case 'gold_to_dollars': destinationValue = sourceValue * 3.30 / 1000000; break;
+                case 'dollars_to_unbound': destinationValue = sourceValue * 6000 / 100; break;
+                case 'unbound_to_dollars': destinationValue = sourceValue * 100 / 6000; break;
+                case 'dollars_to_bound': destinationValue = sourceValue * 12000 / 100; break;
+                case 'bound_to_dollars': destinationValue = sourceValue * 100 / 12000; break;
+                case 'gold_to_bound': destinationValue = sourceValue * 396 / 1000000; break;
+                case 'bound_to_gold': destinationValue = sourceValue * 1000000 / 396; break;
+                case 'gold_to_unbound': destinationValue = sourceValue * 6000 / 3.30; break;
+                case 'unbound_to_gold': destinationValue = sourceValue * 3.30 / 6000; break;
+                case 'unbound_to_bound': destinationValue = sourceValue * 2; break;
+                case 'bound_to_unbound': destinationValue = sourceValue / 2; break;
             }
         }
     } catch (e) {
-        result = 'Invalid input! Enter a number.';
+        destinationValue = 'Invalid input! Enter a number.';
     }
 
-    document.getElementById('result').innerText = result;
+    document.getElementById('destinationValue').value = destinationValue;
 }
