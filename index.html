@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion Rate Bot</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <label for="conversion">Select Conversion Type:</label>
+    <select id="conversion">
+        <option value="dollars_to_gold">Dollars to Gold</option>
+        <option value="dollars_to_unbound">Dollars to Unbound</option>
+        <option value="dollars_to_bound">Dollars to Bound</option>
+        <option value="gold_to_bound">Gold to Bound</option>
+    </select><br>
+    <label for="value">Enter Value:</label>
+    <input type="text" id="value"><br>
+    <button onclick="convert()">Convert</button>
+    <p>Result: <span id="result"></span></p>
+</body>
+</html>
