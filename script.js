@@ -17,10 +17,10 @@ function convert() {
                 case 'dollars_to_unbound': destinationValue = sourceValue * 6000 / 100; break;
                 case 'gold_to_bound': destinationValue = sourceValue * 396 / 1000000; break;
                 case 'gold_to_dollars': destinationValue = sourceValue * 3.3 / 1000000; break;
-                case 'gold_to_unbound': destinationValue = sourceValue * 6000 / 3.3; break;
+                case 'gold_to_unbound': destinationValue = sourceValue * 198 / 1000000; break;
                 case 'unbound_to_bound': destinationValue = sourceValue * 12000 / 6000; break;
                 case 'unbound_to_dollars': destinationValue = sourceValue * 100 / 6000; break;
-                case 'unbound_to_gold': destinationValue = sourceValue * 3.3 / 6000; break;
+                case 'unbound_to_gold': destinationValue = sourceValue * 1000000 / 198; break; // Corrected rate
             }
         }
 
