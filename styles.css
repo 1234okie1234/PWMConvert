@@ -25,6 +25,10 @@ input, select {
   width: calc(33% - 10px);
 }
 
+#customRate {
+  width: calc(100% - 20px);
+}
+
 #destinationValue {
   background-color: #f3f3f3;
 }

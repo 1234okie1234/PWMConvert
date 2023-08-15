@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversion Rate Bot</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
+        <input type="text" id="customRate" placeholder="Custom rate ($3.33 default)">
+        <p style="font-size: 0.8em; color: grey;">Enter a custom rate above or leave blank to use the default rate of $3.33.</p>
         <input type="text" id="sourceValue" placeholder="Enter value">
-<select id="conversion">
+        <select id="conversion">
     <option value="bound_to_dollars">Bound to Dollars</option>
     <option value="bound_to_gold">Bound to Gold</option>
     <option value="bound_to_unbound">Bound to Unbound</option>
@@ -25,7 +27,6 @@
     <option value="unbound_to_dollars">Unbound to Dollars</option>
     <option value="unbound_to_gold">Unbound to Gold</option>
 </select>
-
         <input type="text" id="destinationValue" readonly placeholder="Result">
         <button onclick="convert()">Convert</button>
     </div>
