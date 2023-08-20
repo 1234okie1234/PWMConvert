@@ -4,31 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversion Rate Bot</title>
+    <title>Conversion Rate Bot and Elixirs</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <input type="text" id="customRate" placeholder="Custom rate ($3.33 default)">
-        <p style="font-size: 0.8em; color: grey;">Enter a custom rate above or leave blank to use the default rate of $3.33.</p>
-        <input type="text" id="sourceValue" placeholder="Enter value">
-        <select id="conversion">
-    <option value="bound_to_dollars">Bound to Dollars</option>
-    <option value="bound_to_gold">Bound to Gold</option>
-    <option value="bound_to_unbound">Bound to Unbound</option>
-    <option value="dollars_to_bound">Dollars to Bound</option>
-    <option value="dollars_to_gold">Dollars to Gold</option>
-    <option value="dollars_to_unbound">Dollars to Unbound</option>
-    <option value="gold_to_bound">Gold to Bound</option>
-    <option value="gold_to_dollars">Gold to Dollars</option>
-    <option value="gold_to_unbound">Gold to Unbound</option>
-    <option value="unbound_to_bound">Unbound to Bound</option>
-    <option value="unbound_to_dollars">Unbound to Dollars</option>
-    <option value="unbound_to_gold">Unbound to Gold</option>
-</select>
-        <input type="text" id="destinationValue" readonly placeholder="Result">
-        <button onclick="convert()">Convert</button>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Conversion')">Conversion</button>
+        <button class="tablinks" onclick="openTab(event, 'Elixirs')">Elixirs</button>
+    </div>
+
+    <div id="Conversion" class="tabcontent">
+        <div class="container">
+            <input type="text" id="customRate" placeholder="Custom rate ($3.33 default)">
+            <p style="font-size: 0.8em; color: grey;">Enter a custom rate above or leave blank to use the default rate of $3.33.</p>
+            <input type="text" id="sourceValue" placeholder="Enter value">
+            <select id="conversion">
+                <option value="bound_to_dollars">Bound to Dollars</option>
+                <option value="bound_to_gold">Bound to Gold</option>
+                <option value="bound_to_unbound">Bound to Unbound</option>
+                <option value="dollars_to_bound">Dollars to Bound</option>
+                <option value="dollars_to_gold">Dollars to Gold</option>
+                <option value="dollars_to_unbound">Dollars to Unbound</option>
+                <option value="gold_to_bound">Gold to Bound</option>
+                <option value="gold_to_dollars">Gold to Dollars</option>
+                <option value="gold_to_unbound">Gold to Unbound</option>
+                <option value="unbound_to_bound">Unbound to Bound</option>
+                <option value="unbound_to_dollars">Unbound to Dollars</option>
+                <option value="unbound_to_gold">Unbound to Gold</option>
+            </select>
+            <input type="text" id="destinationValue" readonly placeholder="Result">
+            <button onclick="convert()">Convert</button>
+        </div>
+    </div>
+
+    <div id="Elixirs" class="tabcontent">
+        <!-- This will be populated by JavaScript -->
     </div>
 </body>
 </html>

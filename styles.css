@@ -5,10 +5,42 @@ body {
   padding: 0;
 }
 
+.tab {
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: #333;
+}
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.tabcontent {
+  display: none;
+  padding: 20px;
+  border-top: none;
+}
+
 .container {
   width: 80%;
   max-width: 500px;
-  margin: 100px auto;
+  margin: 20px auto;
   padding: 30px;
   background-color: #ffffff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -47,4 +79,31 @@ button {
 
 button:hover {
   background-color: #45a049;
+}
+
+#Elixirs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+.elixir-item {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.elixir-item img {
+  max-width: 390px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.elixir-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
 }
